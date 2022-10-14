@@ -1,0 +1,31 @@
+﻿@model User
+
+<h1 class="text-center">Ro'yxatdan o'tish</h1>
+
+<div class="d-flex justify-content-center">
+    <form asp-action="Edit" class="mb-3 w-25" method="post" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="Name" class="form-label">Name</label>
+            <input class="form-control" type="text" id="Name" name="Name" placeholder="Name" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="PhoneNumber" class="form-label">Phone number</label>
+            <input class="form-control" type="text" id="PhoneNumber" name="Phone" placeholder="PhoneNumber" />
+            <span asp-validation-for="Phone" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="Password" class="form-label">Password</label>
+            <input class="form-control" type="password" id="Password" name="Password" placeholder="Password" />
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="ImageFile" class="form-label">Image</label>
+            <input class="form-control" type="file" id="ImageFile" name="ImageFile" />
+            <span asp-validation-for="Image" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <input class="form-control btn-primary" type="submit" value="Sign up" />
+        </div>
+    </form>
+</div>

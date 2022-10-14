@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Avtoexam</h1>
+    <p>4 xil tilda 700dan ortiq <strong>YHQ</strong> test savollaridan iborat onlayn test tizimi</p>
+</div>
+
+@{
+    if (ViewBag.IsLogin == false)
+    {
+        <div class="text-center">
+            <a asp-controller="Users" asp-action="SignUp" class="btn btn-primary">Sign up</a>
+            <a asp-controller="Users" asp-action="SignIn" class="btn btn-light">Sign in</a>
+        </div>
+    }
+}
+
+
